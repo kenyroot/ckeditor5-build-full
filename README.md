@@ -1,15 +1,13 @@
-CKEditor 5 classic editor build
+CKEditor 5 customize classic editor build
 ========================================
 
-[![npm version](https://badge.fury.io/js/%40ckeditor%2Fckeditor5-build-classic.svg)](https://www.npmjs.com/package/@ckeditor/ckeditor5-build-classic)
-[![Build Status](https://travis-ci.org/ckeditor/ckeditor5-build-classic.svg?branch=master)](https://travis-ci.org/ckeditor/ckeditor5-build-classic)
-<br>
-[![Dependency Status](https://david-dm.org/ckeditor/ckeditor5-build-classic/status.svg)](https://david-dm.org/ckeditor/ckeditor5-build-classic)
+## Thanks for CKEditor
+[![npm version](https://badge.fury.io/js/ckeditor5-build-full.svg)](https://badge.fury.io/js/ckeditor5-build-full)
 [![devDependency Status](https://david-dm.org/ckeditor/ckeditor5-build-classic/dev-status.svg)](https://david-dm.org/ckeditor/ckeditor5-build-classic?type=dev)
 
-The classic editor build for CKEditor 5. Read more about the [classic editor build](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/overview.html#classic-editor) and see the [demo](https://ckeditor.com/docs/ckeditor5/latest/examples/builds/classic-editor.html).
+The customize full features for classic editor build for CKEditor 5.
 
-![CKEditor 5 classic editor build screenshot](https://c.cksource.com/a/1/img/npm/ckeditor5-build-classic.png)
+![CKEditor 5 classic editor build screenshot](https://69653.cdn.cke-cs.com/koJQDPDGL6GPN5JawfAb/images/9249665bcd70ba2f08782496313e6cf32c196223d1bf5943.png)
 
 ## Documentation
 
@@ -25,44 +23,29 @@ See:
 First, install the build from npm:
 
 ```bash
-npm install --save @ckeditor/ckeditor5-build-classic
+npm install --save ckeditor5-build-full
 ```
 
-And use it in your website:
-
-```html
-<div id="editor">
-	<p>This is the editor content.</p>
-</div>
-<script src="./node_modules/@ckeditor/ckeditor5-build-classic/build/ckeditor.js"></script>
-<script>
-	ClassicEditor
-		.create( document.querySelector( '#editor' ) )
-		.then( editor => {
-			window.editor = editor;
-		} )
-		.catch( error => {
-			console.error( 'There was a problem initializing the editor.', error );
-		} );
-</script>
-```
-
-Or in your JavaScript application:
+And use it in your ReactJS application:
 
 ```js
-import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import React from 'react'
+import CKEditor from '@ckeditor/ckeditor5-react'
+import FullEditor from 'ckeditor5-build-full'
 
-// Or using the CommonJS version:
-// const ClassicEditor = require( '@ckeditor/ckeditor5-build-classic' );
+const index = () => {
+  return (
+    <CKEditor
+      editor={FullEditor}
+      onChange={(event, editor) => {
+        const data = editor.getData()
+        console.log({ event, editor, data })
+      }}
+    />
+  )
+}
 
-ClassicEditor
-	.create( document.querySelector( '#editor' ) )
-	.then( editor => {
-		window.editor = editor;
-	} )
-	.catch( error => {
-		console.error( 'There was a problem initializing the editor.', error );
-	} );
+export default index
 ```
 
 **Note:** If you are planning to integrate CKEditor 5 deep into your application, it is actually more convenient and recommended to install and import the source modules directly (like it happens in `ckeditor.js`). Read more in the [Advanced setup guide](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/advanced-setup.html).
