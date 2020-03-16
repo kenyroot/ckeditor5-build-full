@@ -1,7 +1,7 @@
 CKEditor 5 customize classic editor build
 ========================================
 
-## Thanks for CKEditor
+## Thanks to CKEditor
 [![npm version](https://badge.fury.io/js/ckeditor5-build-full.svg)](https://badge.fury.io/js/ckeditor5-build-full)
 [![devDependency Status](https://david-dm.org/ckeditor/ckeditor5-build-classic/dev-status.svg)](https://david-dm.org/ckeditor/ckeditor5-build-classic?type=dev)
 
