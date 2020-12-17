@@ -56,6 +56,7 @@ import ImageTextAlternative from "@ckeditor/ckeditor5-image/src/imagetextalterna
 import SimpleUploadAdapter from "@ckeditor/ckeditor5-upload/src/adapters/simpleuploadadapter";
 import TableProperties from "@ckeditor/ckeditor5-table/src/tableproperties";
 import TableCellProperties from "@ckeditor/ckeditor5-table/src/tablecellproperties";
+import TodoList from '@ckeditor/ckeditor5-list/src/todolist';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -107,7 +108,8 @@ ClassicEditor.builtinPlugins = [
 	ImageTextAlternative,
 	SimpleUploadAdapter,
 	TableProperties,
-	TableCellProperties
+	TableCellProperties,
+	TodoList
 ];
 
 // Editor configuration.
@@ -133,6 +135,7 @@ ClassicEditor.defaultConfig = {
 			"|",
 			"bulletedList",
 			"numberedList",
+			"todoList",
 			"|",
 			"alignment",
 			"indent",
@@ -191,5 +194,5 @@ ClassicEditor.defaultConfig = {
 		]
 	},
 	// This value must be kept in sync with the language defined in webpack.config.js.
-	language: "en"
+	language: "ru"
 };
