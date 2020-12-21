@@ -96,5 +96,7 @@
   "directories": {
     "test": "tests"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@solomoto/ckeditor5-font-color": "github:pshurygin/ckeditor5-font"
+  }
 }

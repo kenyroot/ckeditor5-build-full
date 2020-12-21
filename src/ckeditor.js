@@ -39,7 +39,10 @@ import Code from "@ckeditor/ckeditor5-basic-styles/src/code";
 import Subscript from "@ckeditor/ckeditor5-basic-styles/src/subscript";
 import Superscript from "@ckeditor/ckeditor5-basic-styles/src/superscript";
 import Clipboard from "@ckeditor/ckeditor5-clipboard/src/clipboard";
-import Font from "@ckeditor/ckeditor5-font/src/font";
+import FontFamily from '@ckeditor/ckeditor5-font/src/fontfamily';
+import FontSize from '@ckeditor/ckeditor5-font/src/fontsize';
+import FontColor from "@solomoto/ckeditor5-font-color/src/fontcolor";
+import FontBackgroundColor from '@ckeditor/ckeditor5-font/src/fontbackgroundcolor';
 import Highlight from "@ckeditor/ckeditor5-highlight/src/highlight";
 import HorizontalLine from "@ckeditor/ckeditor5-horizontal-line/src/horizontalline";
 import Mention from "@ckeditor/ckeditor5-mention/src/mention";
@@ -93,7 +96,10 @@ ClassicEditor.builtinPlugins = [
 	Subscript,
 	Superscript,
 	Clipboard,
-	Font,
+	FontFamily,
+	FontSize,
+	FontColor,
+	FontBackgroundColor,
 	Highlight,
 	HorizontalLine,
 	Mention,
