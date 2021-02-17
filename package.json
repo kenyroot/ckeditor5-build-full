@@ -61,7 +61,6 @@
     "@ckeditor/ckeditor5-typing": "^17.0.0",
     "@ckeditor/ckeditor5-upload": "^17.0.0",
     "@ckeditor/ckeditor5-word-count": "^17.0.0",
-    "@solomoto/ckeditor5-font-color": "github:pshurygin/ckeditor5-font",
     "eslint": "^5.5.0",
     "eslint-config-ckeditor5": "^2.0.0",
     "postcss-loader": "^3.0.0",
@@ -97,5 +96,7 @@
   "directories": {
     "test": "tests"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@solomoto/ckeditor5-font-color": "^17.0.0"
+  }
 }
