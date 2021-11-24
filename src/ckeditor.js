@@ -41,7 +41,7 @@ import Superscript from "@ckeditor/ckeditor5-basic-styles/src/superscript";
 import Clipboard from "@ckeditor/ckeditor5-clipboard/src/clipboard";
 import FontFamily from '@ckeditor/ckeditor5-font/src/fontfamily';
 import FontSize from '@ckeditor/ckeditor5-font/src/fontsize';
-import FontColor from "@solomoto/ckeditor5-font-color/src/fontcolor";
+import FontColor from "@ckeditor/ckeditor5-font/src/fontcolor";
 import FontBackgroundColor from '@ckeditor/ckeditor5-font/src/fontbackgroundcolor';
 import Highlight from "@ckeditor/ckeditor5-highlight/src/highlight";
 import HorizontalLine from "@ckeditor/ckeditor5-horizontal-line/src/horizontalline";
@@ -60,6 +60,7 @@ import SimpleUploadAdapter from "@ckeditor/ckeditor5-upload/src/adapters/simpleu
 import TableProperties from "@ckeditor/ckeditor5-table/src/tableproperties";
 import TableCellProperties from "@ckeditor/ckeditor5-table/src/tablecellproperties";
 import TodoList from '@ckeditor/ckeditor5-list/src/todolist';
+import SourceEditing from '@ckeditor/ckeditor5-source-editing/src/sourceediting';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -72,7 +73,7 @@ ClassicEditor.builtinPlugins = [
 	Italic,
 	BlockQuote,
 	CKFinder,
-	EasyImage,
+	// EasyImage,
 	Heading,
 	Image,
 	ImageCaption,
@@ -115,7 +116,8 @@ ClassicEditor.builtinPlugins = [
 	SimpleUploadAdapter,
 	TableProperties,
 	TableCellProperties,
-	TodoList
+	TodoList,
+	SourceEditing
 ];
 
 // Editor configuration.
@@ -161,7 +163,8 @@ ClassicEditor.defaultConfig = {
 			"restrictedEditingException",
 			"|",
 			"undo",
-			"redo"
+			"redo",
+			"sourceEditing"
 		]
 	},
 	blockToolbar: [
