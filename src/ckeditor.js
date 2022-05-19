@@ -61,6 +61,7 @@ import TableProperties from "@ckeditor/ckeditor5-table/src/tableproperties";
 import TableCellProperties from "@ckeditor/ckeditor5-table/src/tablecellproperties";
 import TodoList from '@ckeditor/ckeditor5-list/src/todolist';
 import SourceEditing from '@ckeditor/ckeditor5-source-editing/src/sourceediting';
+import {LinkImage} from "@ckeditor/ckeditor5-link";
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -117,7 +118,8 @@ ClassicEditor.builtinPlugins = [
 	TableProperties,
 	TableCellProperties,
 	TodoList,
-	SourceEditing
+	SourceEditing,
+	LinkImage
 ];
 
 // Editor configuration.
@@ -185,6 +187,8 @@ ClassicEditor.defaultConfig = {
 	},
 	image: {
 		toolbar: [
+			"linkImage",
+			"|",
 			"imageStyle:alignLeft",
 			"imageStyle:full",
 			"imageStyle:alignRight",
